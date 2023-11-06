@@ -2,11 +2,13 @@
 body {
     background-color: hsl(228, 50%, 96%);
     font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 header {
     background-color: hsla(0, 0%, 100%, 0.5);
-    color: #fff;
+    color: #333; /* Changed text color for better contrast */
     text-align: center;
     padding: 20px 0;
 }
@@ -23,7 +25,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: black;
+    color: #333; /* Changed link color for better contrast */
     font-weight: bold;
     transition: color 0.3s;
 }
@@ -32,13 +34,13 @@ nav a:hover {
     color: #007BFF;
 }
 
-h1 {
+h1, p {
     text-align: center;
 }
 
 p {
-    margin: 2px;
-    font-size: 20px;
+    margin: 20px 0;
+    font-size: 18px; /* Slightly reduced font size for readability */
 }
 
 .project-card {
@@ -58,20 +60,21 @@ p {
 }
 
 .project-images img {
-    width: 600px;
-    height: 300px;
+    max-width: 100%;
+    height: auto;
+    width: auto; /* Allow images to scale more naturally */
 }
 
 #share-project {
     background-color: #fff;
-    color: black;
+    color: #333;
     text-align: center;
     padding: 50px;
 }
 
 #share-project a {
     text-decoration: none;
-    color: #fff;
+    color: #007BFF;
     background-color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
@@ -86,19 +89,19 @@ p {
 
 footer {
     background-color: #fff;
-    color: black;
+    color: #333;
     text-align: center;
     padding: 20px 0;
 }
 
 footer a {
     text-decoration: none;
-    color: black;
+    color: #007BFF;
     margin: 0 10px;
 }
 
 footer a:hover {
-    color: #007BFF;
+    color: #333;
 }
 
 /* Responsive design for smaller screens */
@@ -109,8 +112,8 @@ footer a:hover {
     }
 
     .project-images img {
-        width: 90%; /* Make images fill the container width */
-        max-width: 100%; /* Ensure images don't exceed their original size */
+        width: 90%;
+        max-width: 100%;
         height: auto;
     }
 }
