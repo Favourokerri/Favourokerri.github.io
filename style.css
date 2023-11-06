@@ -65,20 +65,38 @@ p {
     width: auto; /* Allow images to scale more naturally */
 }
 
-#share-project {
+
+/* Default styles for larger screens */
+/* ... (previous styles) ... */
+
+/* Add new styles for the Features section */
+#features {
     background-color: #fff;
-    color: #333;
-    text-align: center;
-    padding: 50px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#share-project a {
-    text-decoration: none;
-    color: #007BFF;
-    background-color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin: 10px;
+.feature {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.feature-details {
+    flex: 1;
+    padding: 20px;
+}
+
+.feature-image {
+    flex: 1;
+    text-align: center;
+}
+
+.feature-image img {
+    max-width: 100%;
+    height: auto;
 }
 
 #contact {
@@ -115,5 +133,18 @@ footer a:hover {
         width: 90%;
         max-width: 100%;
         height: auto;
+    }
+    
+    .feature {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+    }
+
+    .feature-details {
+        padding: 20px;
+        text-align: center; /* Center text content */
+    }
+
+    .feature-image {
+        text-align: center;
     }
 }
