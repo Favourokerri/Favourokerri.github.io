@@ -81,6 +81,7 @@ p {
 .feature {
     display: flex;
     justify-content: space-between;
+    margin-top: 30px;
     margin-bottom: 20px;
 }
 
@@ -95,7 +96,7 @@ p {
 }
 
 .feature-image img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
 }
 
