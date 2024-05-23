@@ -18,6 +18,7 @@ soundButton.addEventListener('change', (event) => {
     } else {
         event.target.removeAttribute('checked');
         sound = false;
+        
     }
 })
 
