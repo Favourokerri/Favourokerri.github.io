@@ -3,110 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" style="width: fit-content;" href="style.css">
+    <script src="https://kit.fontawesome.com/db19a8a095.js" crossorigin="anonymous"></script>
+    <title>Document</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">My Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="about">
-        <h1>About Me</h1>
-        <p>I'm a passionate developer on a continuous journey of exploration and creation. With a strong foundation in web development, I'm currently immersing myself in the world of Python and its powerful frameworks like Django.
-            My journey in the world of technology is seasoned with curiosity, an insatiable appetite for learning, and a zest for solving real-world problems with elegant solutions. I thrive on the ever-evolving nature of the 
-            field and am excited about the infinite possibilities it offers.
-        </p>
-    </section>
-
-    <section id="projects">
-        <h1>My Projects</h1>
-        <div class="project-card">
-            <div class="project-images">
-                <img src="image/dashboard.png" alt="Project 1 Screenshot">
-                <img src="image/room.png" alt="Another Screenshot">
-            </div>
-            <h2>STUDENT HUB</h2>
-            <p>Welcome to Student Hub, the all-in-one platform designed to make learning engaging, effective, and collaborative for students of all levels.
-                At Student Hub, we understand the challenges students face when it comes to studying and retaining information. That's why we've created a
-                 dynamic online space where students can take control of their learning journey.
-            </p>
-            <a href="https://github.com/Favourokerri/student-kit" target="_blank">GitHub</a>
-        </div>
-    
-        <!-- Repeat the project card structure for each project -->
-    </section>
-
-    
-    <section id="features">
-        <h1>Key Features</h1>
-        <div class="feature">
-            <div class="feature-details">
-                <h3>Flashcard Creation</h3>
-                <p>Easily create, customize, and organize your flashcards for any subject. Whether you're preparing for exams, learning a new language, or simply want to brush up on your knowledge, our flashcard tool simplifies the process.</p>
-            </div>
-            <div class="feature-image">
-                <img src="image/1.png" alt="Flashcard Creation Image">
-            </div>
-        </div>
-        <!-- Repeat the feature structure for each feature -->
-        <div class="feature">
-        <div class="feature-details">
-            <h3>Card items</h3>
-                <p>Generate questions for each flash cards.
-                </p>
-        </div>
-        <div class="feature-image">
-            <img src="image/3.png" alt="Flashcard Creation Image">
-        </div>
+    <div class="game hide" id="menuDom">
+        <button id="play"><i class="fa-solid fa-play"></i> Play</button>
+        <button id="howToPlayButton"><i class="fa-solid fa-question"></i> How to Play </button>
+        <button id="settingsButton"><i class="fa-solid fa-gear"></i> Settings </button>
     </div>
 
-    <div class="feature">
-        <div class="feature-details">
-            <h3>Practice Mode</h3>
-                <p>Dive into practice mode to reinforce your memory and test your knowledge. It's a
-                     fun and effective way to make sure you're ready for your next quiz or test.
-                </p>
-        </div>
-        <div class="feature-image">
-            <img src="image/2.png" alt="Flashcard Creation Image">
-        </div>
+    <div class="game hide" id="gameDom">
+        <p class="text" id="text"><i class="fa-solid fa-question"></i><i class="fa-solid fa-question"></i></p>
+        <img src="image/play.png" class="logo" id="logo" alt="">
+
+        <label for="answer" id="label" class="hide">Enter your answer and hit enter:</label>
+        <input type="text" id="input" class="answer hide" id="answer" onkeypress="checkAnswer(event)">
+
+        <button id="start"><i class="fa-solid fa-play"></i></i> start </button>
+        <button class="back"><i class="fa-solid fa-rotate-left"></i> back </button>
     </div>
 
-    <div class="feature">
-        <div class="feature-details">
-            <h3>Create study rooms and join any</h3>
-                <p> you will be able to create and join study rooms for visual learning with other peers
-                </p>
-        </div>
-        <div class="feature-image">
-            <img src="image/room.png" alt="Flashcard Creation Image">
-        </div>
+    <div class="game hide" id="howToPlay">
+       <h2 style="color: black"> How to play  </h2>
+        <p>"Guess the Number" is a fun game. Here's how to play:</p>
+        <p>1) <b>Start the Game:</b> Click the "Start" button to generate a random number between 1 and 10</p>
+        <p>2) <b>Make Your Guess:</b> Enter your guess in the provided input field amd hit enter.</p>
+        <p>3) <b>Check Your Guess:</b> If your guess matches the generated number, you win! Otherwise, you lose.</p>
+    <button class="back"><i class="fa-solid fa-rotate-left"></i> back </button>
     </div>
 
-    </div>
-    </section>
+    <!-- settings Dom-->
+    <div class="game" id="settings">
+        <h2 style="color: black"> How to play  </h2>
 
-    
-    <section id="contact">
-        <h1>Contact Me</h1>
-        <p>Contact information: Email: favourokerri767@gmail.com</p>
-        <!-- Add a contact form if desired -->
-    </section>
+        <button id="musicToggle"><i class="fa-solid fa-music"></i> Sound: on
+            <label class="switch">
+                <input checked type="checkbox" id="soundSettings">
+                <span class="slider round"></span>
+              </label>
+        </button>
+         
+     <button class="back"><i class="fa-solid fa-rotate-left"></i> back </button>
+     </div>
 
-    <footer>
-        <p>&copy; 2023 Your Name</p>
-        <a href="https://github.com/Favourokerri" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/favour-okerri-658080271/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3Bn%2FhtB68ERM22CcO9GcKXaQ%3D%3D" target="_blank">LinkedIn</a>
-    </footer>
+      <!-- start game song-->
+      <audio id="startMusic" controls class="hide">
+        <source src="audio/start.mp3" type="audio/mpeg">
+    </audio>
 
-    <!-- Add your JavaScript code here if needed -->
+    <!-- correct game song-->
+    <audio id="correctMusic" controls class="hide">
+        <source src="audio/correct.wav" type="audio/mpeg">
+    </audio>
 
+    <!-- worn game song-->
+    <audio id="wrongMusic" controls class="hide">
+        <source src="audio/wrong.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="confetti.js"></script>
+    <script src="app.js"></script>
+    <script src="game.js"></script>
 </body>
 </html>
