@@ -35,7 +35,7 @@ function floorType(totalFloors, currentFloor) {
 }
 
 submit.addEventListener('click', function DisplayFloor(event) {
-    
+    event.preventDefault();
     const NoFloors = document.getElementById('floors').value;
     const elevators = document.getElementById('lifts').value;
 
@@ -176,4 +176,4 @@ async function moveElevator(elevatorId, floorId) {
   // Close the doors and update the state
   elevator.classList.remove('open');
   elevatorId.state = 'arrived';
-}
+     }
