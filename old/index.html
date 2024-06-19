@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" style="width: fit-content;" href="style.css">
+    <script src="https://kit.fontawesome.com/db19a8a095.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="game " id="menuDom">
+        <button id="play"><i class="fa-solid fa-play"></i> Play</button>
+        <button id="howToPlayButton"><i class="fa-solid fa-question"></i> How to Play </button>
+        <button id="settingsButton"><i class="fa-solid fa-gear"></i> Settings </button>
+    </div>
+
+    <div class="game hide" id="gameDom">
+        <p class="text" id="text"><i class="fa-solid fa-question"></i><i class="fa-solid fa-question"></i></p>
+        <img src="image/play.png" class="logo" id="logo" alt="">
+
+        <label for="answer" id="label" class="hide">Enter your answer and hit enter:</label>
+        <input type="text" id="input" class="answer hide" id="answer" onkeypress="checkAnswer(event)">
+
+        <button id="start"><i class="fa-solid fa-play"></i></i> start </button>
+        <button class="back"><i class="fa-solid fa-rotate-left"></i> back </button>
+    </div>
+
+    <div class="game hide" id="howToPlay">
+       <h2 style="color: black"> How to play  </h2>
+        <p>"Guess the Number" is a fun game. Here's how to play:</p>
+        <p>1) <b>Start the Game:</b> Click the "Start" button to generate a random number between 1 and 10</p>
+        <p>2) <b>Make Your Guess:</b> Enter your guess in the provided input field amd hit enter.</p>
+        <p>3) <b>Check Your Guess:</b> If your guess matches the generated number, you win! Otherwise, you lose.</p>
+    <button class="back"><i class="fa-solid fa-rotate-left"></i> back </button>
+    </div>
+
+    <!-- settings Dom-->
+    <div class="game hide" id="settings">
+        <h2 style="color: black"> How to play  </h2>
+
+        <button id="musicToggle"><i class="fa-solid fa-music"></i> Sound:
+            <label class="switch">
+                <input checked type="checkbox" id="soundSettings">
+                <span class="slider round"></span>
+              </label>
+        </button>
+         
+     <button class="back"><i class="fa-solid fa-rotate-left"></i> back </button>
+     </div>
+
+      <!-- start game song-->
+      <audio id="startMusic" controls class="hide">
+        <source src="audio/start.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- correct game song-->
+    <audio id="correctMusic" controls class="hide">
+        <source src="audio/correct.wav" type="audio/mpeg">
+    </audio>
+
+    <!-- worn game song-->
+    <audio id="wrongMusic" controls class="hide">
+        <source src="audio/wrong.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="confetti.js"></script>
+    <script src="app.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
