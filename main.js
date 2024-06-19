@@ -36,9 +36,8 @@ function floorType(totalFloors, currentFloor) {
 
 submit.addEventListener('click', function DisplayFloor(event) {
     event.preventDefault();
-    const NoFloors = Number(document.getElementById('floors').value);
-    const elevators = Number(document.getElementById('lifts').value);
-
+    const NoFloors = document.getElementById('floors').value;
+    const elevators = document.getElementById('lifts').value;
 
     const form = document.getElementById('form');
     const elevatorContainer = document.getElementById('elevator-container');
@@ -61,7 +60,6 @@ submit.addEventListener('click', function DisplayFloor(event) {
       console.log(elevatorStatus);
     }
     initializeButtons();
-    
 })
 
 
