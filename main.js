@@ -38,7 +38,7 @@ submit.addEventListener('click', function DisplayFloor(event) {
     event.preventDefault();
     const NoFloors = Number(document.getElementById('floors').value);
     const elevators = Number(document.getElementById('lifts').value);
-    if (elevators <= 0 || NoFloors <=0) {
+    f (elevators <= 0 || NoFloors <=0) {
     alert("Please enter a positive number for this field.");
      return;
 }
