@@ -74,7 +74,7 @@ async function initializeButtons() {
   const downBtns = document.querySelectorAll('.down-btn');
   const upBtn = document.querySelectorAll('.up-btn');
   downBtns.forEach((button) => {
-    button.addEventListener('click', function(){
+    button.addEventListener('click', async function(){
       floorId = button.id
       floor = document.getElementById(`floor-${floorId}`);
       console.log(floor)
@@ -97,10 +97,10 @@ async function initializeButtons() {
         const elevator = document.getElementById(`${elevatorId.id}`);
         elevator.classList.add('move');
         elevator.style.transform = `translateY(${0}px)`;
+        await new Promise((resolve) => setTimeout(resolve, 2000)); 
         elevator.classList.add('open');
-        setTimeout(() => {
-          elevator.classList.remove('open');
-      }, 2000);
+        await new Promise((resolve) => setTimeout(resolve, 2000)); // Wait for 2 seconds
+        elevator.classList.remove('open');
       }   
       else {
         elevatorToMove.state = 'moving';
@@ -115,7 +115,7 @@ async function initializeButtons() {
   })
 
   upBtn.forEach((button) => {
-    button.addEventListener('click', function(){
+    button.addEventListener('click', async function(){
       floorId = button.id
       floor = document.getElementById(`floor-${floorId}`);
       console.log(floor)
@@ -138,10 +138,10 @@ async function initializeButtons() {
         const elevator = document.getElementById(`${elevatorId.id}`);
         elevator.classList.add('move');
         elevator.style.transform = `translateY(${0}px)`;
+        await new Promise((resolve) => setTimeout(resolve, 2000)); 
         elevator.classList.add('open');
-        setTimeout(() => {
-          elevator.classList.remove('open');
-      }, 2000);
+        await new Promise((resolve) => setTimeout(resolve, 2000)); // Wait for 2 seconds
+        elevator.classList.remove('open');
       }   
       else {
         elevatorToMove.state = 'moving';
@@ -182,4 +182,4 @@ async function moveElevator(elevatorId, floorId) {
   // Close the doors and update the state
   elevator.classList.remove('open');
   elevatorId.state = 'arrived';
-     }
+}
