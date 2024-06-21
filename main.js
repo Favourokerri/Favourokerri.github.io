@@ -39,6 +39,11 @@ submit.addEventListener('click', function DisplayFloor(event) {
     const NoFloors = document.getElementById('floors').value;
     const elevators = document.getElementById('lifts').value;
 
+    if(NoFloors <= 0 || elevators <= 0){
+      alert('floor or lift cannot be zero');
+    }
+
+   else {
     const form = document.getElementById('form');
     const elevatorContainer = document.getElementById('elevator-container');
     form.classList.add('hide');
@@ -60,6 +65,7 @@ submit.addEventListener('click', function DisplayFloor(event) {
       console.log(elevatorStatus);
     }
     initializeButtons();
+   }
 })
 
 
