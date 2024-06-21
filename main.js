@@ -182,4 +182,4 @@ async function moveElevator(elevatorId, floorId) {
   // Close the doors and update the state
   elevator.classList.remove('open');
   elevatorId.state = 'arrived';
-}
+     }
